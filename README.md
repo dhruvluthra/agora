@@ -1,37 +1,17 @@
-## Welcome to GitHub Pages
+## Introducing **Agora**: A New Platform to Organize Office Hours
 
-This is a test change. You can use the [editor on GitHub](https://github.com/dhruvluthra/agora/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Running office hours is difficult. A lot of people show up, and a lot of them need help. Agora is a new mobile application that allows professor and teaching assistants to more efficiently manage their time, allowing them to help as many people as possible. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### How It Works
+Agora simplifies office hours by allowing students to sign up for office hours ahead of time, ensuring they don't waste time and are only at office hours when the teacher is available to help them. Students can enter what they need help with- so that if a group of students needs help on the same topic, the teacher can address the entire group instead of having to address each student individually. Each office hours session also creates a forum on which the teacher can answer common questions, post pictures, and interact with with the students.
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Progress
 
-```markdown
-Syntax highlighted code block
+The application is currently in early stage develop.
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/dhruvluthra/agora/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Team
+- Dhruv Luthra
+- Lisa Sapozhnikov
+- Lara Sonmez
+- Jenny Luo
