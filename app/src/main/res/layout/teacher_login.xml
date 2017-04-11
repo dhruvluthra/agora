@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="45dp"
+        android:layout_marginTop="70dp"
+        android:text="Teacher Login"
+        android:id="@+id/textView" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:hint="Google Username"
+        android:padding="10dip"
+        android:textColor="#999999"
+        android:textSize="25dip" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:inputType="textPassword"
+        android:hint="Google Password"
+        android:padding="10dip"
+        android:textColor="#999999"
+        android:textSize="25dip" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:textSize="25dp"
+        android:text="Log In"
+        android:id="@+id/loginbutton"
+        android:layout_below="@+id/password"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>

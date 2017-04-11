@@ -1,0 +1,7 @@
+#Tue Apr 11 02:57:53 EDT 2017
+base.0=/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_bb9a84dd64b1809225cac0c080f2b62ee19aff7b
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_9dee1b25c34126c8d2aab4dc0cdde572e556b895/classes.dex
+base.1=/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_9dee1b25c34126c8d2aab4dc0cdde572e556b895
+file.0=/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_bb9a84dd64b1809225cac0c080f2b62ee19aff7b/classes.dex
