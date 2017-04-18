@@ -1,0 +1,7 @@
+#Mon Apr 17 18:11:56 EDT 2017
+base.0=/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_67173912e409161acd7f0da6f290ab1f6fa97fc4
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_5a0ede886af358ab802105cce0630539451dc4e0/classes.dex
+base.1=/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_5a0ede886af358ab802105cce0630539451dc4e0
+file.0=/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_67173912e409161acd7f0da6f290ab1f6fa97fc4/classes.dex
