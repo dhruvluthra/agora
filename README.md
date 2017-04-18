@@ -9,6 +9,8 @@ Agora simplifies office hours by allowing students to sign up for office hours a
 ### Progress
 
 The application is currently in early stage develop.
+- Alpha Stage Check Up (April 18, 2017): We have created a formal home screen which allows the user to login to a previously created account or create a new account if they do not have one. This account feature was implemented using Firebase's authentication feature. After the user has logged in, they are taken to the home screen which will be the pivot point for the rest of the functionality of application, with the option to create or join an office hours session and/or quit the application. The functionality of the home screen is the next step of completion: mainly, the creation and management of the session, likely using Firebase's realtime database functionality. 
+
 
 ### Team
 - Dhruv Luthra
