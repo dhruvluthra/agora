@@ -3,93 +3,12 @@
 
     <item
         is-multidex="true"
-        jar="/Users/dhruvluthra1/.android/build-cache/7f663a3f1acd4b43cbfdd285610f1dca438a891e/output/jars/classes.jar"
+        jar="/Users/dhruvluthra1/.gradle/caches/modules-2/files-2.1/com.sendbird.sdk/sendbird-android-sdk/3.0.24/90fa1ef4f37e479e2e9a8715cb1ea8677595baa5/sendbird-android-sdk-3.0.24.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_be2fa142e379ec34195f8190b1c1279d226730e8/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/dhruvluthra1/.android/build-cache/39473522a9625adde03b6ab979d140788e585dea/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="bdcc2a9572f18b8c90a3a157cab6cdfc97c6c736">
-        <dex dex="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d375ff247f8ab4e769b2daeaa791287e74e8bc0b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/dhruvluthra1/.android/build-cache/51ff5db3044e052334decc18b463e57429fa1dcd/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
-        <dex dex="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_924eadcfbe706be9a559e4d9f5e5bd80f35537fb/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/dhruvluthra1/.android/build-cache/3fff2eca914463898b8570fd12e48084e07e2591/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="4b42a61cd5924f28e95894e859e6abe57847e2f3">
-        <dex dex="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_af9bce80538e54bf7c691e1d380ca555b45483ea/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="55afd782d0fd5ada985f96715d9dd1d8cd93bb84">
-        <dex dex="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_5a0ede886af358ab802105cce0630539451dc4e0/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/dhruvluthra1/.android/build-cache/18db5309ab620b697bcf3599d04d1ca42874046c/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
-        <dex dex="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1f113d41672c660729c1bfbfd04cdc3adfa4baa1/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/dhruvluthra1/.android/build-cache/bd6407b68af8005e1e0e6306501db482088cd55b/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
-        <dex dex="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e2ad5a0a91887c91a59d080efd6d93dfb7843b5f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/dhruvluthra1/.android/build-cache/fd6bafd1dc08f0dee8db5e52f505fe815279d71a/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
-        <dex dex="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c40e12821719c127f07e213dd59f93f9709948f8/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/dhruvluthra1/.android/build-cache/8a79c55d5c394ae3d9b4b5d8a6882736f280dc52/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
-        <dex dex="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7762300e2350a91952d50e68f45a489875a41e5c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/dhruvluthra1/.android/build-cache/a7c558c11bf630f02ed17d56ca8bc559524c7e70/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
-        <dex dex="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9e726920586a3d4331c5e9b6bc4e7dd0d3b0409a/classes.dex" />
+        sha1="90fa1ef4f37e479e2e9a8715cb1ea8677595baa5">
+        <dex dex="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/transforms/dex/debug/folders/1000/10/sendbird-android-sdk-3.0.24_9174a5e4edd631c317fdbbd0e80064fe63c2e1bd/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -102,84 +21,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/dhruvluthra1/.android/build-cache/aa51a36301eee245d3f09ff2efd11c0b49b5e24e/output/jars/classes.jar"
+        jar="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="888983f51cf34f57a93ff16832552f2f15937212">
-        <dex dex="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a3bb23d2998a5898768c75a3a95795123408210c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/dhruvluthra1/.android/build-cache/91943d8a61b7bfb452dbf4b01e0506495669b5a9/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
-        <dex dex="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7e9bf0df4f004f4d83fb924d4f23cd9f4724769c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/dhruvluthra1/.android/build-cache/15f28935090dc217776fb9c55ce4fa841ff62aa6/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="a1aa1dd9917e887bfe732cc5e561ae6ae8f9a84a">
-        <dex dex="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_74a211c094cd77ec32a5b30e6adb4c9beb749b6c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/dhruvluthra1/.android/build-cache/f20e1b3783cf3c17a6f641c61dd81d90db85f36d/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="aee64634871d88a419d59eb743c1258a60f19700">
-        <dex dex="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_db5d9f387095779e63a86fcf245ce5d6c0594205/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/dhruvluthra1/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.0/support-annotations-25.1.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
-        <dex dex="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.1.0_329af01ed49de86b328c5f62d8338c0ab615d66c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/dhruvluthra1/.android/build-cache/a65e358345e0ec3d0d36ce91a9d8a612ec8f69cb/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="19696dc358ac668e341f28c41e3387d61ccdb81d">
-        <dex dex="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_22ef28786fae0dc1ec9eac11f9da8feb29d6068e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/dhruvluthra1/.android/build-cache/7d4d8970ce8bcec9a068ec362b16428b8dfa8126/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0a5d5553c308643a9022f15513ebdd59e9c78d82">
-        <dex dex="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_cf9f7ed9672c8a842041ebb572a884f3bf3b0ac3/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/dhruvluthra1/.android/build-cache/1d58f414192f13e4def34f76484ec71db89f0e0d/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="399f75732ff1ac159f9e73611536f1508bf18d3b">
-        <dex dex="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e56f1afad3bdba8e43419717faffdb328312c60c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/dhruvluthra1/.android/build-cache/4d33eda0fcb6fac45eeb1fb5261658b0e2fee6e5/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="6003d64df88a6ce5e961fa2bad7f1b9b97689ac1">
-        <dex dex="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_dfc9a296ee8f2f22b6c9bff86852f15e6389b7db/classes.dex" />
+        sha1="736c17e39365768373ff37b4f495a1806134adb6">
+        <dex dex="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_5a0ede886af358ab802105cce0630539451dc4e0/classes.dex" />
     </item>
 
 </items>

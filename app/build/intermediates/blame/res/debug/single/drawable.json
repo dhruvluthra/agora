@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark_normal.xml",
+        "source": "/Users/dhruvluthra1/.android/build-cache/a65e358345e0ec3d0d36ce91a9d8a612ec8f69cb/output/res/drawable/common_google_signin_btn_text_dark_normal.xml"
+    },
+    {
         "merged": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
         "source": "/Users/dhruvluthra1/.android/build-cache/8a79c55d5c394ae3d9b4b5d8a6882736f280dc52/output/res/drawable/abc_switch_thumb_material.xml"
     },
@@ -10,10 +14,6 @@
     {
         "merged": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/res/merged/debug/drawable/abc_vector_test.xml",
         "source": "/Users/dhruvluthra1/.android/build-cache/8a79c55d5c394ae3d9b4b5d8a6882736f280dc52/output/res/drawable/abc_vector_test.xml"
-    },
-    {
-        "merged": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark_normal.xml",
-        "source": "/Users/dhruvluthra1/.android/build-cache/a65e358345e0ec3d0d36ce91a9d8a612ec8f69cb/output/res/drawable/common_google_signin_btn_text_dark_normal.xml"
     },
     {
         "merged": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
@@ -132,12 +132,12 @@
         "source": "/Users/dhruvluthra1/.android/build-cache/8a79c55d5c394ae3d9b4b5d8a6882736f280dc52/output/res/drawable/abc_ic_go_search_api_material.xml"
     },
     {
-        "merged": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_indicator_material.xml",
-        "source": "/Users/dhruvluthra1/.android/build-cache/8a79c55d5c394ae3d9b4b5d8a6882736f280dc52/output/res/drawable/abc_ratingbar_indicator_material.xml"
-    },
-    {
         "merged": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light_focused.xml",
         "source": "/Users/dhruvluthra1/.android/build-cache/a65e358345e0ec3d0d36ce91a9d8a612ec8f69cb/output/res/drawable/common_google_signin_btn_text_light_focused.xml"
+    },
+    {
+        "merged": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_indicator_material.xml",
+        "source": "/Users/dhruvluthra1/.android/build-cache/8a79c55d5c394ae3d9b4b5d8a6882736f280dc52/output/res/drawable/abc_ratingbar_indicator_material.xml"
     },
     {
         "merged": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/res/merged/debug/drawable/abc_ic_arrow_drop_right_black_24dp.xml",
@@ -176,12 +176,12 @@
         "source": "/Users/dhruvluthra1/.android/build-cache/8a79c55d5c394ae3d9b4b5d8a6882736f280dc52/output/res/drawable/abc_item_background_holo_light.xml"
     },
     {
-        "merged": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
-        "source": "/Users/dhruvluthra1/.android/build-cache/8a79c55d5c394ae3d9b4b5d8a6882736f280dc52/output/res/drawable/abc_list_selector_holo_dark.xml"
-    },
-    {
         "merged": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark_focused.xml",
         "source": "/Users/dhruvluthra1/.android/build-cache/a65e358345e0ec3d0d36ce91a9d8a612ec8f69cb/output/res/drawable/common_google_signin_btn_text_dark_focused.xml"
+    },
+    {
+        "merged": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
+        "source": "/Users/dhruvluthra1/.android/build-cache/8a79c55d5c394ae3d9b4b5d8a6882736f280dc52/output/res/drawable/abc_list_selector_holo_dark.xml"
     },
     {
         "merged": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/res/merged/debug/drawable/background.png",

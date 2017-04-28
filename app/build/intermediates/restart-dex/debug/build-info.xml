@@ -6,30 +6,30 @@
     density="420dpi"
     format="10"
     plugin-version="2.3.1"
-    timestamp="1492467114390"
+    timestamp="1493418719170"
     token="-614090866147488050"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="360" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="28" />
     <task
         name="verifier"
-        duration="0" />
+        duration="15" />
 
     <artifact
-        location="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/outputs/apk/app-debug.apk"
-        type="SPLIT_MAIN" />
+        location="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+        type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1492467053751"
+        timestamp="1493412128638"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
@@ -70,11 +70,22 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1492467114390"
+        timestamp="1493415725977"
         verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
         <artifact
             location="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/outputs/apk/app-debug.apk"
             type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1493418719170"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            type="SPLIT" />
     </build>
 
 </instant-run>

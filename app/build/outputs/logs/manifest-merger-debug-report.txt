@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:2:1-24:12
+ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:2:1-46:12
 	package
 		ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:3:5-40
 		INJECTED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml
@@ -13,8 +13,23 @@ ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalpr
 	android:versionCode
 		INJECTED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:5:5-67
+MERGED from [com.google.firebase:firebase-analytics:10.2.1] /Users/dhruvluthra1/.android/build-cache/7d4d8970ce8bcec9a068ec362b16428b8dfa8126/output/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.1] /Users/dhruvluthra1/.android/build-cache/aa51a36301eee245d3f09ff2efd11c0b49b5e24e/output/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-iid:10.2.1] /Users/dhruvluthra1/.android/build-cache/1d58f414192f13e4def34f76484ec71db89f0e0d/output/AndroidManifest.xml:20:5-66
+	android:name
+		ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:5:22-64
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:6:5-80
+	android:name
+		ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:6:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:7:5-81
+	android:name
+		ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:7:22-78
 application
-ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:5:5-22:19
+ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:9:5-44:19
 MERGED from [com.google.firebase:firebase-core:10.2.1] /Users/dhruvluthra1/.android/build-cache/9aa2402b9ede59b27e5a8e832dda79fb871df080/output/AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-analytics:10.2.1] /Users/dhruvluthra1/.android/build-cache/7d4d8970ce8bcec9a068ec362b16428b8dfa8126/output/AndroidManifest.xml:24:5-33:19
 MERGED from [com.google.firebase:firebase-analytics-impl:10.2.1] /Users/dhruvluthra1/.android/build-cache/aa51a36301eee245d3f09ff2efd11c0b49b5e24e/output/AndroidManifest.xml:24:5-28:19
@@ -34,35 +49,53 @@ MERGED from [com.android.support:animated-vector-drawable:25.1.0] /Users/dhruvlu
 MERGED from [com.android.support:support-vector-drawable:25.1.0] /Users/dhruvluthra1/.android/build-cache/a7c558c11bf630f02ed17d56ca8bc559524c7e70/output/AndroidManifest.xml:23:5-20
 MERGED from [com.android.support:support-compat:25.1.0] /Users/dhruvluthra1/.android/build-cache/91943d8a61b7bfb452dbf4b01e0506495669b5a9/output/AndroidManifest.xml:25:5-20
 	android:label
-		ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:8:9-41
+		ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:12:9-41
 	android:supportsRtl
-		ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:9:9-35
+		ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:13:9-35
 	android:allowBackup
-		ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:6:9-35
+		ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:10:9-35
 	android:icon
-		ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:7:9-41
+		ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:11:9-41
 	android:theme
-		ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:10:9-59
+		ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:14:9-59
 activity#compsci290.edu.duke.agora.MainActivity
-ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:11:9-17:20
+ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:15:9-21:20
 	android:name
-		ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:11:19-47
+		ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:15:19-47
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:12:13-16:29
+ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:16:13-20:29
 action#android.intent.action.MAIN
-ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:13:17-69
+ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:17:17-69
 	android:name
-		ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:13:25-66
+		ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:17:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:15:17-77
+ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:19:17-77
 	android:name
-		ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:15:27-74
+		ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:19:27-74
 activity#compsci290.edu.duke.agora.HomeActivity
-ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:19:9-21:75
+ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:23:9-26:20
 	android:theme
-		ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:21:13-63
+		ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:25:13-63
 	android:name
-		ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:20:13-41
+		ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:24:13-41
+activity#compsci290.edu.duke.agora.SessionActivity
+ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:28:9-31:20
+	android:theme
+		ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:30:13-63
+	android:name
+		ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:29:13-44
+activity#compsci290.edu.duke.agora.QueueActivity
+ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:33:9-36:20
+	android:theme
+		ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:35:13-63
+	android:name
+		ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:34:13-42
+activity#compsci290.edu.duke.agora.MessagingActivity
+ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:38:9-41:20
+	android:theme
+		ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:40:13-63
+	android:name
+		ADDED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml:39:13-46
 uses-sdk
 INJECTED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.google.firebase:firebase-core:10.2.1] /Users/dhruvluthra1/.android/build-cache/9aa2402b9ede59b27e5a8e832dda79fb871df080/output/AndroidManifest.xml:4:5-43
@@ -71,6 +104,8 @@ MERGED from [com.google.firebase:firebase-analytics-impl:10.2.1] /Users/dhruvlut
 MERGED from [com.google.firebase:firebase-iid:10.2.1] /Users/dhruvluthra1/.android/build-cache/1d58f414192f13e4def34f76484ec71db89f0e0d/output/AndroidManifest.xml:17:5-43
 MERGED from [com.google.firebase:firebase-auth:10.2.1] /Users/dhruvluthra1/.android/build-cache/3fff2eca914463898b8570fd12e48084e07e2591/output/AndroidManifest.xml:17:5-43
 MERGED from [com.google.android.gms:play-services-base:10.2.1] /Users/dhruvluthra1/.android/build-cache/a65e358345e0ec3d0d36ce91a9d8a612ec8f69cb/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-database:10.2.1] /Users/dhruvluthra1/.android/build-cache/5deb46d595eddda25641e8ff8dd7d6cc2be5071a/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-database-connection:10.2.1] /Users/dhruvluthra1/.android/build-cache/fa02faa4d5062e2af2c80ca72595e1855e1ca668/output/AndroidManifest.xml:3:5-43
 MERGED from [com.google.firebase:firebase-common:10.2.1] /Users/dhruvluthra1/.android/build-cache/15f28935090dc217776fb9c55ce4fa841ff62aa6/output/AndroidManifest.xml:3:5-43
 MERGED from [com.google.android.gms:play-services-tasks:10.2.1] /Users/dhruvluthra1/.android/build-cache/4d33eda0fcb6fac45eeb1fb5261658b0e2fee6e5/output/AndroidManifest.xml:3:5-43
 MERGED from [com.google.android.gms:play-services-basement:10.2.1] /Users/dhruvluthra1/.android/build-cache/39473522a9625adde03b6ab979d140788e585dea/output/AndroidManifest.xml:17:5-43
@@ -91,12 +126,6 @@ MERGED from [com.android.support:support-compat:25.1.0] /Users/dhruvluthra1/.and
 	android:minSdkVersion
 		INJECTED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/AndroidManifest.xml
-uses-permission#android.permission.INTERNET
-ADDED from [com.google.firebase:firebase-analytics:10.2.1] /Users/dhruvluthra1/.android/build-cache/7d4d8970ce8bcec9a068ec362b16428b8dfa8126/output/AndroidManifest.xml:20:5-66
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.1] /Users/dhruvluthra1/.android/build-cache/aa51a36301eee245d3f09ff2efd11c0b49b5e24e/output/AndroidManifest.xml:20:5-66
-MERGED from [com.google.firebase:firebase-iid:10.2.1] /Users/dhruvluthra1/.android/build-cache/1d58f414192f13e4def34f76484ec71db89f0e0d/output/AndroidManifest.xml:20:5-66
-	android:name
-		ADDED from [com.google.firebase:firebase-analytics:10.2.1] /Users/dhruvluthra1/.android/build-cache/7d4d8970ce8bcec9a068ec362b16428b8dfa8126/output/AndroidManifest.xml:20:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.firebase:firebase-analytics:10.2.1] /Users/dhruvluthra1/.android/build-cache/7d4d8970ce8bcec9a068ec362b16428b8dfa8126/output/AndroidManifest.xml:21:5-78
 MERGED from [com.google.firebase:firebase-analytics-impl:10.2.1] /Users/dhruvluthra1/.android/build-cache/aa51a36301eee245d3f09ff2efd11c0b49b5e24e/output/AndroidManifest.xml:21:5-78

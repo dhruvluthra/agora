@@ -19,9 +19,16 @@ android {
     }
 }
 
+repositories {
+    maven { url "https://raw.githubusercontent.com/smilefam/SendBird-SDK-Android/master/" }
+}
+
 dependencies {
     compile 'com.google.firebase:firebase-core:10.2.1'
     compile 'com.google.firebase:firebase-auth:10.2.1'
+    compile 'com.google.firebase:firebase-database:10.2.1'
+    compile 'com.sendbird.sdk:sendbird-android-sdk:3.0.24'
+
 
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {

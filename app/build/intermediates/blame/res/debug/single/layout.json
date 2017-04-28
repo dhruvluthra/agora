@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
-        "source": "/Users/dhruvluthra1/.android/build-cache/8a79c55d5c394ae3d9b4b5d8a6882736f280dc52/output/res/layout/select_dialog_item_material.xml"
-    },
-    {
         "merged": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/res/merged/debug/layout/activity_home.xml",
         "source": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/res/layout/activity_home.xml"
+    },
+    {
+        "merged": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
+        "source": "/Users/dhruvluthra1/.android/build-cache/8a79c55d5c394ae3d9b4b5d8a6882736f280dc52/output/res/layout/select_dialog_item_material.xml"
     },
     {
         "merged": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
@@ -22,6 +22,10 @@
     {
         "merged": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
         "source": "/Users/dhruvluthra1/.android/build-cache/8a79c55d5c394ae3d9b4b5d8a6882736f280dc52/output/res/layout/abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/res/merged/debug/layout/queue_entry.xml",
+        "source": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/res/layout/queue_entry.xml"
     },
     {
         "merged": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
@@ -70,6 +74,10 @@
     {
         "merged": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
         "source": "/Users/dhruvluthra1/.android/build-cache/8a79c55d5c394ae3d9b4b5d8a6882736f280dc52/output/res/layout/abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/res/merged/debug/layout/activity_queue.xml",
+        "source": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/res/layout/activity_queue.xml"
     },
     {
         "merged": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/res/merged/debug/layout/notification_template_lines_media.xml",
@@ -124,6 +132,10 @@
         "source": "/Users/dhruvluthra1/.android/build-cache/8a79c55d5c394ae3d9b4b5d8a6882736f280dc52/output/res/layout/abc_alert_dialog_button_bar_material.xml"
     },
     {
+        "merged": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/res/merged/debug/layout/activity_messaging.xml",
+        "source": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/res/layout/activity_messaging.xml"
+    },
+    {
         "merged": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
         "source": "/Users/dhruvluthra1/.android/build-cache/8a79c55d5c394ae3d9b4b5d8a6882736f280dc52/output/res/layout/notification_template_part_chronometer.xml"
     },
@@ -138,6 +150,10 @@
     {
         "merged": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
         "source": "/Users/dhruvluthra1/.android/build-cache/8a79c55d5c394ae3d9b4b5d8a6882736f280dc52/output/res/layout/abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/res/merged/debug/layout/activity_session.xml",
+        "source": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/src/main/res/layout/activity_session.xml"
     },
     {
         "merged": "/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",

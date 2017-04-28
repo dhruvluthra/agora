@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText mEmail;
     private EditText mPassword;
+    private boolean goHomeActivity = false;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,9 +39,16 @@ public class MainActivity extends AppCompatActivity {
                 mEmail = (EditText) findViewById(R.id.username);
                 mPassword = (EditText) findViewById(R.id.password);
                 signIn(mEmail.getText().toString(), mPassword.getText().toString());
-                Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_LONG).show();
                 Intent homeIntent = new Intent(getApplicationContext(), HomeActivity.class);
-                startActivity(homeIntent);
+
+                Bundle mBundle = new Bundle();
+                mBundle.putString("username", mEmail.getText().toString());
+                homeIntent.putExtras(mBundle);
+
+                if (true) {
+                    Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
+                    startActivity(homeIntent);
+                }
             }
         });
 
@@ -50,25 +58,27 @@ public class MainActivity extends AppCompatActivity {
                 mEmail = (EditText) findViewById(R.id.username);
                 mPassword = (EditText) findViewById(R.id.password);
                 createAccount(mEmail.getText().toString(), mPassword.getText().toString());
-                Toast.makeText(getApplicationContext(), "Account Created", Toast.LENGTH_LONG).show();
                 Intent homeIntent = new Intent(getApplicationContext(), HomeActivity.class);
-                startActivity(homeIntent);
+                if (true) {
+                    Toast.makeText(getApplicationContext(), "Account Created", Toast.LENGTH_SHORT).show();
+                    startActivity(homeIntent);
+                }
             }
         });
 
         mAuth = FirebaseAuth.getInstance();
-        mAuthListener = new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                FirebaseUser user = firebaseAuth.getCurrentUser();
-                if (user != null) {
-                    // User is signed in
-                    //Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
-                } else {
-                    // User is signed out
-                    //Log.d(TAG, "onAuthStateChanged:signed_out");
+            mAuthListener = new FirebaseAuth.AuthStateListener() {
+                @Override
+                public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                    FirebaseUser user = firebaseAuth.getCurrentUser();
+                    if (user != null) {
+                        // User is signed in
+                        //Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
+                    } else {
+                        // User is signed out
+                        //Log.d(TAG, "onAuthStateChanged:signed_out");
+                    }
                 }
-            }
         };
 
     }
@@ -89,7 +99,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void signIn(String email, String password) {
         if (!validateForm()) {
-            Toast.makeText(getApplicationContext(), "Not a valid Entry!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Not a valid entry!", Toast.LENGTH_SHORT).show();
+            goHomeActivity = false;
             return;
         }
 
@@ -101,7 +112,11 @@ public class MainActivity extends AppCompatActivity {
                 // the auth state listener will be notified and logic to handle the
                 // signed in user can be handled in the listener.
                 if (!task.isSuccessful()) {
-                    Toast.makeText(getApplicationContext(), "Sign Up failed", Toast.LENGTH_LONG).show();
+                    goHomeActivity = false;
+                    Toast.makeText(getApplicationContext(), "Sign In Failed", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    goHomeActivity = true;
                 }
             }
         });
@@ -110,7 +125,8 @@ public class MainActivity extends AppCompatActivity {
     private void createAccount(String email, String password) {
         // Log.d(TAG, "createAccount:" + email);
         if (!validateForm()) {
-            Toast.makeText(getApplicationContext(), "Not a valid Entry!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Not a valid entry!", Toast.LENGTH_SHORT).show();
+            goHomeActivity = false;
             return;
         }
 
@@ -124,7 +140,11 @@ public class MainActivity extends AppCompatActivity {
                         // the auth state listener will be notified and logic to handle the
                         // signed in user can be handled in the listener.
                         if (!task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(), "Sign Up Failed", Toast.LENGTH_LONG).show();
+                            goHomeActivity = false;
+                            Toast.makeText(getApplicationContext(), "Sign Up Failed", Toast.LENGTH_SHORT).show();
+                        }
+                        else{
+                            goHomeActivity = true;
                         }
 
                     }

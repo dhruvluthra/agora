@@ -11,6 +11,13 @@
     android:background="@drawable/background"
     tools:context="compsci290.edu.duke.agora.HomeActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="agora"
+        android:textSize="50sp"
+        android:id="@+id/appName"
+        android:fontFamily="sans-serif-condensed" />
 
     <Button
         android:id="@+id/joinsession"
