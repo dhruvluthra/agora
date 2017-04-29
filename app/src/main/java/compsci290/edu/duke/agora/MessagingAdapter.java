@@ -34,7 +34,20 @@ public class MessagingAdapter extends ArrayAdapter<Entry> {
         mEntries = entries;
     }
 
+    public View getView(int position, View convertView, ViewGroup parent) {
+        Entry message = getItem(position);
 
+        if (convertView == null) {
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.message_entry, parent, false);
+        }
+        TextView userName = (TextView) convertView.findViewById(R.id.userTextView);
+        Log.d("Message", "user: " + message.mUser);
+        userName.setText(message.mUser);
+        TextView messageText = (TextView) convertView.findViewById(R.id.messageTextView);
+        messageText.setText(message.mMessage);
+
+        return convertView;
+    }
 
 
 }

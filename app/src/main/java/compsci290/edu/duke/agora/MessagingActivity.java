@@ -39,8 +39,8 @@ public class MessagingActivity extends AppCompatActivity {
     private String mUser;
     private EditText mMessage;
     private OpenChannel mChannel;
-    private ArrayAdapter<String> adapter;
-    private ArrayList<String> messageList = new ArrayList<String>();
+    MessagingAdapter mAdapter;
+    private ArrayList<Entry> messageList = new ArrayList<Entry>();
 
     private boolean connected = false;
 
@@ -58,9 +58,8 @@ public class MessagingActivity extends AppCompatActivity {
             public void onConnected(User user, SendBirdException e) {
                 Log.d("Message", "connected");
                 if (e != null) {
-                    Toast.makeText(getApplicationContext(), "Message failed4", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Connection Failed", Toast.LENGTH_SHORT).show();
                     Log.d("Message", "error: " + e.toString());
-                    // error
                     return;
                 }
             }
@@ -91,11 +90,8 @@ public class MessagingActivity extends AppCompatActivity {
 
         ListView listView = (ListView) findViewById(R.id.m_list_view);
 
-
-        adapter = new ArrayAdapter<String>(this, R.layout.activity_messaging, messageList);
-        listView.setAdapter(adapter);
-        Log.d("Message", "got here");
-
+        mAdapter = new MessagingAdapter(this, messageList);
+        listView.setAdapter(mAdapter);
 
     }
 
@@ -107,35 +103,6 @@ public class MessagingActivity extends AppCompatActivity {
         // This means that you will be automatically disconnected from SendBird when your
         // app enters the background.
         SendBird.setAutoBackgroundDetection(true);
-
-        SendBird.addConnectionHandler(CONNECTION_HANDLER_ID, new SendBird.ConnectionHandler() {
-            @Override
-            public void onReconnectStarted() {
-                Log.d("CONNECTION", "OpenChatFragment onReconnectStarted()");
-            }
-
-            @Override
-            public void onReconnectSucceeded() {
-                Log.d("CONNECTION", "OpenChatFragment onReconnectSucceeded()");
-            }
-
-            @Override
-            public void onReconnectFailed() {
-                Log.d("CONNECTION", "OpenChatFragment onReconnectFailed()");
-            }
-        });
-
-        SendBird.addChannelHandler(CHANNEL_HANDLER_ID, new SendBird.ChannelHandler() {
-            @Override
-            public void onMessageReceived(BaseChannel baseChannel, BaseMessage baseMessage) {
-                Toast.makeText(getApplicationContext(), "Message receieved", Toast.LENGTH_SHORT).show();
-                // Add new message to view
-                if (baseChannel.getUrl().equals(CHANNEL_URL)) {
-                    // mChatAdapter.addFirst(baseMessage);
-
-                }
-            }
-        });
 
     }
 
@@ -159,7 +126,7 @@ public class MessagingActivity extends AppCompatActivity {
             @Override
             public void onResult(OpenChannel openChannel, SendBirdException e) {
                 if (e!= null){
-                    Toast.makeText(getApplicationContext(), "Message failed1", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Message failed", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -178,6 +145,9 @@ public class MessagingActivity extends AppCompatActivity {
                     public void onSent(UserMessage userMessage, SendBirdException e) {
                         mMessage.getText().clear();
                         Log.d("Message", "message sent: " + userMessage.getMessage());
+                        Entry currentMessage = new Entry(mUser, userMessage.getMessage());
+                        messageList.add(currentMessage);
+                        mAdapter.notifyDataSetChanged();
                         if (e != null) {
                             Log.d("Message", "send error");
                             Toast.makeText(getApplicationContext(), "Message failed3", Toast.LENGTH_SHORT).show();
@@ -193,9 +163,10 @@ public class MessagingActivity extends AppCompatActivity {
                                 if (baseMessage instanceof UserMessage) {
                                     // message is a UserMessage
                                     String message = ((UserMessage) baseMessage).getMessage();
+                                    Entry currentMessage = new Entry(((UserMessage) baseMessage).getSender().getUserId(), message);
                                     Log.d("Message", message);
-                                    messageList.add(message);
-                                    adapter.notifyDataSetChanged();
+                                    messageList.add(currentMessage);
+                                    mAdapter.notifyDataSetChanged();
                                 }
                                 return;
                             }
@@ -205,52 +176,6 @@ public class MessagingActivity extends AppCompatActivity {
             }
         });
     }
-
-//    private void enterChannel(String channelUrl) {
-//        OpenChannel.getChannel(channelUrl, new OpenChannel.OpenChannelGetHandler() {
-//            @Override
-//            public void onResult(final OpenChannel openChannel, SendBirdException e) {
-//                if (e != null) {
-//                    // Error!
-//                   //  e.printStackTrace();
-//                    return;
-//                }
-//
-//                // Enter the channel
-//                openChannel.enter(new OpenChannel.OpenChannelEnterHandler() {
-//                    @Override
-//                    public void onResult(SendBirdException e) {
-//                        if (e != null) {
-//                            // Error!
-//                            e.printStackTrace();
-//                            return;
-//                        }
-//
-//                        mChannel = openChannel;
-//
-//                        // loadInitialMessageList(30);
-//
-//                        // Set action bar title to name of channel
-//                        //((OpenChannelActivity) getActivity()).setActionBarTitle(mChannel.getName());
-//                    }
-//                });
-//            }
-//        });
-//    }
-//
-//    private void sendUserMessage(String text) {
-//        mChannel.sendUserMessage(text, new BaseChannel.SendUserMessageHandler() {
-//            @Override
-//            public void onSent(UserMessage userMessage, SendBirdException e) {
-//                if (e != null) {
-//                   return;
-//                }
-//
-//                // Display sent message to RecyclerView
-//                // mChatAdapter.addFirst(userMessage);
-//            }
-//        });
-//    }
 
 }
 

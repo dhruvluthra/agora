@@ -9,15 +9,35 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/background">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="agora"
+        android:textSize="50sp"
+        android:id="@+id/appName"
+        android:fontFamily="sans-serif-condensed" />
+
+    <!-- ImageGrid Screen Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appName"
+        android:layout_marginTop="23dp"
+        android:gravity="center_horizontal"
+        android:text="Forum"
+        android:textSize="20sp" />
+
     <EditText
         android:id="@+id/message_entry"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/scroll_view"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
         android:hint="Enter your message"
         android:padding="10dip"
-        android:textColor="#999999"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        android:textColor="#999999" />
 
     <Button
         android:id="@+id/send_message"
@@ -32,25 +52,26 @@
 
     <ScrollView
         android:id="@+id/m_scroll_view"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_below="@+id/message_entry"
-        android:fillViewport="true" >
+        android:layout_below="@+id/title"
+        android:layout_above="@+id/message_entry"
+        android:fillViewport="true"
+        android:layout_alignParentStart="true">
 
         <!-- Grid View showing image thumbnails -->
+        <ListView
+            android:id="@+id/m_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:gravity="center"
+            android:horizontalSpacing="20dp"
+            android:numColumns="2"
+            android:padding="10dip"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="20dp" />
 
     </ScrollView>
 
-    <ListView
-        android:id="@+id/m_list_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/message_entry"
-        android:layout_alignParentStart="true"
-        android:gravity="center"
-        android:horizontalSpacing="20dp"
-        android:numColumns="2"
-        android:padding="10dip"
-        android:stretchMode="columnWidth"
-        android:verticalSpacing="20dp" />
 </RelativeLayout>

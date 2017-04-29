@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
-        <dex dex="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_67173912e409161acd7f0da6f290ab1f6fa97fc4/classes.dex" />
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_9dee1b25c34126c8d2aab4dc0cdde572e556b895/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="61f35b7aa4bbc0072754f6654572efbcdf28fc75">
-        <dex dex="/Users/dhruvluthra1/my_stuff/college/junior_year/spring/CS290/finalproject/agora/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_5a0ede886af358ab802105cce0630539451dc4e0/classes.dex" />
+        sha1="c130eec3f534f8e03bc72282f27433409f646453">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_bb9a84dd64b1809225cac0c080f2b62ee19aff7b/classes.dex" />
     </item>
 
 </items>
