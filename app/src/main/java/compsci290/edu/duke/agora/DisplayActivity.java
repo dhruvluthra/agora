@@ -2,17 +2,16 @@ package compsci290.edu.duke.agora;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 /**
  * Created by lisasapozhnikov on 5/4/17.
@@ -24,24 +23,31 @@ public class DisplayActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_imagedisplay);
 
-        ImageView imageView = (ImageView) findViewById(R.id.imageView1);
+        final ImageView imageView = (ImageView) findViewById(R.id.imageView1);
 
-        // Get user headshot local path.
-        final SharedPreferences pref = DisplayActivity.this.getSharedPreferences("MyPref", 0);
-        String path = pref.getString("Headshot", "");
+        Intent intent = getIntent();
+        String mUser = intent.getStringExtra("PhotoID");
 
-        if (!path.equals("")){
-            // If user has a locally stored headshot.
-            try{
-                // Inflate image view to full screen.
-                Uri imageUri = Uri.parse(path);
-                File file = new File(imageUri.getPath());
-                InputStream ims = new FileInputStream(file);
-                imageView.setImageBitmap(BitmapFactory.decodeStream(ims));
+        if (!mUser.equals("")){
+            // If username is not null, download user photo from Firebase Storage
+            FirebaseStorage storage = FirebaseStorage.getInstance();
+            StorageReference storageRef = storage.getReference();
+            StorageReference userRef = storageRef.child("images").child(mUser);
+            final long ONE_MEGABYTE = 1024 * 1024;
+            userRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+                @Override
+                public void onSuccess(byte[] bytes) {
+                    Bitmap bmp = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+                    imageView.setImageBitmap(bmp);
+                }
+            });
+            userRef.getBytes(ONE_MEGABYTE).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(Exception exception) {
+                    Toast.makeText(getApplicationContext(), "Image Download Failed", Toast.LENGTH_SHORT).show();
 
-            }  catch (FileNotFoundException e){
-
-            }
+                }
+            });
         }
     }
 

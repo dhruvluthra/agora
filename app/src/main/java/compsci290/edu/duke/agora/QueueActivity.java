@@ -3,28 +3,27 @@ package compsci290.edu.duke.agora;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.media.MediaScannerConnection;
-import android.net.Uri;
+import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
-import android.util.Log;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
-import com.google.firebase.database.*;
 
-import java.io.File;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.*;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+
+import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
-import java.util.Date;
 
 import android.view.View;
 import android.widget.Toast;
@@ -40,27 +39,20 @@ public class QueueActivity extends AppCompatActivity {
     private boolean instructor;
     private int queueLength = 2;
     private static final int CAMERA_PERMISSION = 1;
-    private static final int WRITE_PERMISSION = 2;
     private static final int REQUEST_IMAGE_CAPTURE=1;
-    private static final int REQUEST_TAKE_PHOTO = 1;
-    File mFile;
-    private String mCurrentPhotoPath = "";
+    private EditText add;
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
 
         final SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0);
-        instructor = getIntent().getExtras().getBoolean("instructor");
+        instructor = pref.getBoolean("Instructor", false);
 
         setContentView(R.layout.activity_queue);
 
         // Ask user permission to access camera.
         ActivityCompat.requestPermissions(QueueActivity.this,
                 new String[]{android.Manifest.permission.CAMERA}, CAMERA_PERMISSION);
-
-        // Ask user permission to write to external storage.
-        ActivityCompat.requestPermissions(QueueActivity.this,
-                new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, WRITE_PERMISSION);
 
         final DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
 
@@ -69,7 +61,7 @@ public class QueueActivity extends AppCompatActivity {
             mDatabase.child("students").setValue("studentsList");
         }
 
-        //Create listener for students added to queue in Firebase.
+        //Create listener for students added to queue in Firebase database.
         mDatabase.child("students").addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot snapshot, String previousChildName) {
@@ -79,6 +71,7 @@ public class QueueActivity extends AppCompatActivity {
                 qAdapter.notifyDataSetChanged();
             }
 
+            //Create listener for students updated in Firebase database.
             public void onChildChanged(DataSnapshot snapshot, String previousChildName) {
                 // Update display;
                 String value = snapshot.getValue(String.class);
@@ -91,8 +84,11 @@ public class QueueActivity extends AppCompatActivity {
             }
 
             @Override
+            //Create listener for students removed from Firebase database.
             public void onChildRemoved(DataSnapshot snapshot){
-                return;
+                String value = snapshot.getValue(String.class);
+                studentsList.remove(value);
+                qAdapter.notifyDataSetChanged();
             }
 
             public void onCancelled(DatabaseError error) {
@@ -103,7 +99,7 @@ public class QueueActivity extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.list_view);
         qAdapter = new QueueAdapter(this, studentsList);
         listView.setAdapter(qAdapter);
-        final EditText add = (EditText) findViewById(R.id.add);
+        add = (EditText) findViewById(R.id.add);
         // Hide keyboard.
         add.setInputType(InputType.TYPE_NULL);
 
@@ -143,82 +139,48 @@ public class QueueActivity extends AppCompatActivity {
                         @Override
                         public void onClick(View v){
                             // Invoke camera intent.
-                            dispatchTakePictureIntent();
-
+                            Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                            if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+                                startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+                            }
                         }
                     });
 
                 } else {
                     Toast.makeText(getApplicationContext(), "Camera Permission Denied", Toast.LENGTH_SHORT).show();
                 }
-            case WRITE_PERMISSION:
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    // External storage write permission granted.
-                } else {
-                    Toast.makeText(getApplicationContext(), "External Write Permission Denied", Toast.LENGTH_SHORT).show();
-
-                }
                 return;
         }
     }
 
-    private void dispatchTakePictureIntent() {
-        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        // Ensure that there's a camera activity to handle the intent
-        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-            // Create the photo file.
-            File photoFile = null;
-            try {
-                photoFile = createImageFile();
-            } catch (IOException ex) {
-                Log.d("Message", ex.getMessage());
-            }
-            // Continue only if the file was successfully created.
-            if (photoFile != null) {
-                Uri photoURI = FileProvider.getUriForFile(this,
-                        "com.example.android.fileprovider",
-                        photoFile);
-                // Dispatch camera intent.
-                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
-                startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
-            }
-        }
-    }
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+            // On Image Capture, retrieve photo
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            imageBitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+            byte[] dataBytes = baos.toByteArray();
 
-    private File createImageFile() throws IOException {
-        // Create a unique image file name. Save camera image in the external files directory.
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String imageFileName = "JPEG_" + timeStamp + "_";
-        File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
-        File image = File.createTempFile(
-                imageFileName,  /* prefix */
-                ".jpg",         /* suffix */
-                storageDir      /* directory */
-        );
-        mCurrentPhotoPath = image.getAbsolutePath();
-        return image;
-    }
+            // Upload photo to Firebase storage.
+            FirebaseStorage storage = FirebaseStorage.getInstance();
+            StorageReference storageRef = storage.getReference();
+            StorageReference userRef = storageRef.child("images").child(add.getText().toString());
+            UploadTask uploadTask = userRef.putBytes(dataBytes);
 
-    protected void onActivityResult(int requestCode, int resultCode, Intent data){
-        super.onActivityResult(requestCode,resultCode,data);
-        if (requestCode==REQUEST_IMAGE_CAPTURE&& resultCode==RESULT_OK){
-            // Get locally stored image file.
-            Uri imageUri = Uri.parse(mCurrentPhotoPath);
-            File file = new File(imageUri.getPath());
-            mFile = file;
-            if (file.exists()){
-                final SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0);
-                SharedPreferences.Editor editor = pref.edit();
-                editor.putString("Headshot", mCurrentPhotoPath);
-                editor.commit();
-            }
-            //Scan image file to Media Store.
-            MediaScannerConnection.scanFile(QueueActivity.this, new String[]{imageUri.getPath()}, null, new MediaScannerConnection.OnScanCompletedListener(){
-                public void onScanCompleted(String path, Uri uri){
-                    Log.d("Message", "scan completed");
+            // Handle upload failure.
+            uploadTask.addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(Exception exception) {
+                    // Handle unsuccessful uploads
+                    Toast.makeText(getApplicationContext(), "Image Upload Failed", Toast.LENGTH_SHORT).show();
+                }
+            }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                @Override
+                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+
                 }
             });
-
         }
     }
 

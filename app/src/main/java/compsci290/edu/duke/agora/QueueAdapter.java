@@ -3,28 +3,28 @@ package compsci290.edu.duke.agora;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
-import android.util.Log;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
 import java.util.ArrayList;
 
 /**
@@ -46,7 +46,7 @@ public class QueueAdapter extends ArrayAdapter<String> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         // Get the data item for this position.
-        String user = getItem(position);
+        final String user = getItem(position);
         // Check if an existing view is being reused, otherwise inflate the queue entry view.
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.queue_entry, parent, false);
@@ -57,30 +57,42 @@ public class QueueAdapter extends ArrayAdapter<String> {
         name.setText(user);
 
         Button delete = (Button)convertView.findViewById(R.id.delete);
-        ImageView iv = (ImageView)convertView.findViewById(R.id.headshot);
+        final ImageView iv = (ImageView)convertView.findViewById(R.id.headshot);
         final SharedPreferences pref = mContext.getSharedPreferences("MyPref", 0);
-        boolean instructor = pref.getBoolean("Instructor", true);
-        String path = pref.getString("Headshot", "");
+        boolean instructor = pref.getBoolean("Instructor", false);
 
-        if (!path.equals("")){
-            // If user has chosen to include a photo with their queue entry.
-            try{
-                // Display their photo next to their name in the queue.
-                Uri imageUri = Uri.parse(path);
-                File file = new File(imageUri.getPath());
-                InputStream ims = new FileInputStream(file);
-                iv.setImageBitmap(BitmapFactory.decodeStream(ims));
-                iv.setOnClickListener(new View.OnClickListener() {
-                    public void onClick(View v) {
-                        // Inflate image.
-                        Intent i = new Intent (getContext(), DisplayActivity.class);
-                        getContext().startActivity(i);
-                    }
-                });
-            }  catch (FileNotFoundException e){
+        // Download user photo from Firebase Storage
+        FirebaseStorage storage = FirebaseStorage.getInstance();
+        StorageReference storageRef = storage.getReference();
+        StorageReference userRef = storageRef.child("images").child(user);
+
+        final long ONE_MEGABYTE = 1024 * 1024;
+        userRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+            @Override
+            public void onSuccess(byte[] bytes) {
+                // Display user photo in queue entry
+                Bitmap bmp = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+                iv.setImageBitmap(bmp);
+            }
+        });
+        userRef.getBytes(ONE_MEGABYTE).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(Exception exception) {
+                Toast.makeText(mContext, "Image Download Failed", Toast.LENGTH_SHORT).show();
 
             }
-        }
+        });
+
+        iv.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Inflate image.
+                Intent i = new Intent (getContext(), DisplayActivity.class);
+                Bundle mBundle = new Bundle();
+                mBundle.putString("PhotoID", user);
+                i.putExtras(mBundle);
+                getContext().startActivity(i);
+            }
+        });
         if (!instructor){
             // If student, remove deleting capabilities.
             delete.setVisibility(View.INVISIBLE);
@@ -98,11 +110,9 @@ public class QueueAdapter extends ArrayAdapter<String> {
                                 String sName = name.getText().toString();
                                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                                     String student = snapshot.getValue(String.class);
-                                    // Remove deleted entry from Firebase database and local display.
+                                    // Remove deleted entry from Firebase database.
                                     if (student.equals(sName)){
                                         snapshot.getRef().removeValue();
-                                        list.remove(sName);
-                                        notifyDataSetChanged();
                                     }
                                 }
                             }

@@ -16,7 +16,7 @@
     <uses-feature android:name="android.hardware.camera"
         android:required="false" />
     <permission
-        android:name="com.pkg.map.permission.MAPS_RECEIVE"
+        android:name="com.compsci290.edu.duke.agora.map.permission.MAPS_RECEIVE"
         android:protectionLevel="signature" >
     </permission>
     <application

@@ -2,6 +2,348 @@
 <items version="2" >
 
     <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/bfdc0eb5bf643593cfffee0929d8fbe995d15137/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b327fbe2fad414bc38cf0ce8f7efe1a38f572837">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_fe76a04565e5d2377acecad433c1189154e8db08.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/a8799fac202cbc13866ccc5717e42f3c622b70fe/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6f233cb35a6ea92364130d2d48791c461ec65983">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_881a1edb7c1d05276b2de84eba10818dd22fbb1b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/aa17358211a110ddc87dbc3c037b8cbb4a0e0716/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bb115a110992b254f767f337da233071f6f940b8">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_a41ea34d6663243c54941565ee77e99a0f3efb90.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b4dec4bfb37f7a98ae4469f976f8877eff4c546b">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_bb9a84dd64b1809225cac0c080f2b62ee19aff7b/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/d61f09a0fcb230b9ee1cc61457f1f30bfb350a52/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d81a3b0a16f48b4456f442552b62f4b1a472ce24">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_bb30b1de55033e04976f07f970f92852f0ca978a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/f99c30241cd21acd3eaf331dd301fcce21e7b3c9/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b2349ddfe04831042844cbf055e5a072da37ddf8">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_1788bc8afdc25477237fb3cc9506fcb054a691a7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/bfdc0eb5bf643593cfffee0929d8fbe995d15137/output/jars/libs/internal_impl-24.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/internal_impl-24.0.0_311feb88ef8c57947ae69784793e35c26306d935.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/0bacc85a1388fe59a31ab1b1a433f833c81fb0e9/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="efae381df589f3d4977c346c8a980f030315bb8b">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_79f2d995ccd281163112c87d34e84590026c4a4e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/2b7b96421c1b118d9a080c49954f3b883f2ce61c/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a3826817a4de1daa170c33bbc04db24ab6826bd5">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_374b72a2922cd1e32131802165239272da26738b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/d0f2b1a90a46f7513e3743ecd3888e714a114e67/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b215e312bdc1ee7bfda31674eab5df8bad45c014">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_f359270f947a4fa9ca44419aae3a3a34cfa96b55.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/1627794f3a9ad19120a2bcb31a2617e50074a005/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="44098e691b36776973374ac03afe0225b17f8a74">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_527ea794af1b30c78809c3098704955813fe1ac5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/7ae8d29f55753e748554783f2602905664b041d9/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="dbae35d7fc3427d30bef0037bdf61ad0d8d984f8">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_d4a0fbe19af7aadb75a498c7f2e09594792e00df.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/2eae56265298894f68a15f738ab497b895b4f012/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4e684205744f814a73b7752545e0661330415c9e">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_dd7f1e76d4a67d334013bbf92f29f6bc1dde28fa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/dc7d7b2d8394a9667027ff2a9f79bc8aa7b44006/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d395c5142f474891c7750f13b6a85d14682f166b">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_23ba2c9290d44c778d45578da9431ea9cee0fbea.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/7c3c5cd76140fec449370d37ab4e21eb8f4e2168/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4b32372f6821e003ae24cd3389bdd7925247f100">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_a905f74ef0bdb41dab9e88bfdda5eb9324f77a04.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/05a1dff6dc7e499b15ad49bfd90507a005876401/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b136ac09f209c1d91fec7db8518e33d4373c8f39">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_100ac98add3c89cd9fe613dc4cd2fc1e2412ce21.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/e0b8265aabba73221eb913a4647af9ee619e775b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3683531139103cc263b71d8b5ac6062832a8fd30">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_dad17c67174eca9654e3aac99c4cca33e77e64d7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/273f480a76a69664f9c56558e8966558704b54ea/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bfd85a88cf976eb2c54507cc914d8e8914c2f71e">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_717186f6fc3586d5d2a203f955995e945e0bc42e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/f8697a7c3928ff588667df91dcaf63d5c689099a/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ab8343c3aadefce37313ceadd8bc4db1993f2ff0">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_bfd31564fd80e0836c6201c4a4389d0ba4f6d155.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/684ba7ba1cf183e1bc02b46f8a4d902ca07ad6fb/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_b478e7e8da40d1300b5db2a6af9d7522a65caf8b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/4f129d178f76242613943c78fdfbaf990cfd8edc/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cce5792fa30ee8520620f298bf920309423b180f">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_76a892fb732c994d219d051b3a6c466db5832734.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/d691ba40e68b44cccc1c1be79f329d01b3567f30/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bb004ea36f8802bad30000e286c177691740a322">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_5999b92220cc96a857f1b62ccbd8fd15a2cfcad1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/e57751e862445231458cf7bba6d18be4c487b8fd/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8dfe54fbaf4f2a27d395ddf806d0c011170999e0">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_936f75c9fa12966542cf595e5d286b0760f57484.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/94ee657e4625016e37583bcbeb9d6e9158bcb431/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7d67042688d34474a82fe4ef4c6514ef471377ef">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_3cd6a6de5b3827734fe9a899a552c9e869b40149.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/7442fec1f15eae8328c86399faa3739031c80611/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b6818f5804ca0b5eb089d902458faea4179eca1d">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_e6a742aeacf87eff302569b1b0756e12db038689.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/c6d1676c1045e58c39a5313342ab070781a66945/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="125bce1fb2d481b964fabf75f0949957ebe9ecd1">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_2673980ac169c9578d28b904dbbbb359f5b7a562.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/f7cb2125fdba0a9739d5d4742018691acbec93bb/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5ee29abfc804ebd51d65a4bde424c0ee74363939">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_97e5a92899c7ee6ca910b8dcff6b230ae62484cf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/72c511e74b5a78017e87d060002e663bd2149472/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="abf7c64e0bbaaa931738856734f76646ae62d9a5">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_dc42013b9703740a7f3a8f2e6a3007d68bc878c6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/d542430596fb3e2891c8f30306f8a7d39122bd67/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1f9df8b2bfff203397548ee400789154968adfe8">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_1fd5c85c66dcb7c75aec932716207f71a344765d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/227cc202e7d1e7d1cc805540fb22f414279a216e/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c7626a9aa507bbbdc16188bc9a9f9bf3370c1ddd">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_a51d3c5c3f270d43efbe7b7e4c286d7448233836.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/ef0dd4695a9502e153d536e6ac4248875e025318/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="536fd6afd6e1280607c5d70306eb32d385db7964">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_bd5905ac4a588020574fda322a1b6ce5be11c9f8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/039853fb7442f503ad581c43b2f4d6a098de123d/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="da5c606c36276a12a356e351882044c6b4b9e8d4">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_c88d2162143365d1d4fb754bba9288b8b3e1bc3d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/1b062b1a442b5a482c634e7904c6189dc228e032/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0bb2f0934fa55799508ba58ffc9ba579b35744b8">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_a58c29a303420e8d28959352f22ce90571fb5fb1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/eede1ea4a906b96a21cc8d62ac16e50f81f2270c/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="25f55515117e14a658120a7b01a9ea5170409db4">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_c83b5adf76e8aeafb1cbefbcab72a5e43d080c1e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/3bf6c645bc711e29fcf39bca492bc5a77dbd0894/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c3c7f923e1df76640acb3a24823600f034a5d226">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_9f9d5a6adad8da4fed32f8f928207ee942f6e1cd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/865a75b9c10ed64671bb466d5e0f50ee321a7383/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c7ba26433d9e9f4429d83ff65ad79bfc801dc00a">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_7c73e5a560c924e38f3a1ca90e2240670182bec4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/87c77324e2bfbac0932376208c134af5bd279a10/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ec7d3099b4e3cf23230c78acaae438f3371e1c19">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_725978b07c657ba6fa6565cb1194fa5237bcfd81.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/609eff418cc82dbd22f9cca3efee4b4814c2467d/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e4851331b3944beb6e7f77316a7661f53781da62">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_4e7b20c2cb08b05494cbede18656f87a758d8f65.jar" />
+    </item>
+    <item
         is-multidex="true"
         jar="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
@@ -11,13 +353,40 @@
         <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_9dee1b25c34126c8d2aab4dc0cdde572e556b895/classes.dex" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/a56fc4a3d1d2ea6da0030380df370413bf45f907/output/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="e6819fe31ccabd696d858fc82014d10bd7b4953c">
-        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_bb9a84dd64b1809225cac0c080f2b62ee19aff7b/classes.dex" />
+        sha1="6c74dab42788b458960618238f338d324b6f0656">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_619b3e9a48d77fc77c5dc5c41e7d9859c126cb5b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/20c72f30ad3558b5771575358be97baeb172ef6c/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cfa47e1b140562d47bc670629d07e209cd8b02c4">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_724f918fd9b815cc8fa1393082faf20133be7def.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/d0136a02b850de6ea960eb4d1d3968bc065c27e7/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="12032271e6be735e811ad529cb08ff066c381640">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_d8feec548f0bea2dbce95d0f0564b911daf043e8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lisasapozhnikov/.android/build-cache/f6f5b133400fe132a79b6c6b8593561184ed2cd2/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="825c2e97a00df4df5b0f3081faa4fd6280cd7c72">
+        <dex dex="/Users/lisasapozhnikov/Documents/Agora/app/build/intermediates/pre-dexed/debug/classes_7ebf9330bab52446eb3f90cd3e604a426616a0bc.jar" />
     </item>
 
 </items>

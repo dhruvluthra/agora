@@ -1,9 +1,9 @@
 package compsci290.edu.duke.agora;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
-import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -40,7 +40,8 @@ public class MessagingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_messaging);
 
         // Get username for discussion forum.
-        mUser = getIntent().getExtras().getString("username");  // metadata used for chat feature-> needs to be passed through
+        final SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0);
+        mUser = pref.getString("UserName", "");
 
         // Initialize and connet to SendBird open channel.
         SendBird.init(APP_ID, this.getApplicationContext());
@@ -186,9 +187,13 @@ public class MessagingActivity extends AppCompatActivity {
                                 if (e != null) {
                                     return;
                                 }
+                                ArrayList<Entry> tempList = new ArrayList<Entry>();
                                 for(BaseMessage m : messages) {
                                     Entry currentMessage = new Entry(((UserMessage) m).getSender().getUserId(), ((UserMessage) m).getMessage());
-                                    messageList.add(currentMessage);
+                                    tempList.add(currentMessage);
+                                }
+                                for (int i = 0; i < tempList.size(); i++){
+                                    messageList.add(tempList.get(tempList.size()-1-i));
                                 }
                                 mAdapter.notifyDataSetChanged();
                             }

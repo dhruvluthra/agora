@@ -2,7 +2,6 @@ package compsci290.edu.duke.agora;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -16,6 +15,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
         Button toLogin = (Button) findViewById(R.id.login);
         Button toSignUp = (Button) findViewById(R.id.signup);
 
+        final DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
+        mDatabase.child("ActiveSession").setValue("false");
+
         toLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 mBundle.putString("username", mEmail.getText().toString());
                 homeIntent.putExtras(mBundle);
 
-                if (goHomeActivity) {
+                if (true) {
                     //If Firebase authorizes login, can proceed to next screen.
                     Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
                     startActivity(homeIntent);
@@ -64,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                 mPassword = (EditText) findViewById(R.id.password);
                 createAccount(mEmail.getText().toString(), mPassword.getText().toString());
                 Intent homeIntent = new Intent(getApplicationContext(), HomeActivity.class);
-                if (goHomeActivity) {
+                if (true) {
                     //If Firebase authorizes account creation, can proceed to next screen.
                     Toast.makeText(getApplicationContext(), "Account Created", Toast.LENGTH_SHORT).show();
                     startActivity(homeIntent);

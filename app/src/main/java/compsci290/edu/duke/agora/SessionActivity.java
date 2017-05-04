@@ -4,6 +4,7 @@ import android.*;
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.BitmapFactory;
 import android.location.Location;
@@ -49,6 +50,7 @@ import java.util.Locale;
 public class SessionActivity extends AppCompatActivity {
 
     private boolean instructor;
+    private boolean activeSession;
     private String mUser;
     final DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
     Double longitude;
@@ -71,6 +73,12 @@ public class SessionActivity extends AppCompatActivity {
             instructor = false;
         }
 
+        final SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0);
+        SharedPreferences.Editor editor = pref.edit();
+        editor.putBoolean("Instructor", instructor);
+        editor.putString("UserName", mUser);
+        editor.commit();
+
         if (instructor){
             Toast.makeText(getApplicationContext(), "Instructor Permissions", Toast.LENGTH_SHORT).show();
             // Ask user permission to access current location. Only want to cache current location when
@@ -81,6 +89,7 @@ public class SessionActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Student Permissions", Toast.LENGTH_SHORT).show();
         }
 
+
         Button toQueue = (Button) findViewById(R.id.queue);
         Button toMessage = (Button) findViewById(R.id.forum);
 
@@ -89,9 +98,6 @@ public class SessionActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // Go to queue sign up.
                 Intent queueIntent = new Intent(getApplicationContext(), QueueActivity.class);
-                Bundle mBundle = new Bundle();
-                mBundle.putBoolean("instructor", instructor);
-                queueIntent.putExtras(mBundle);
                 startActivity(queueIntent);
             }
         });
@@ -101,9 +107,6 @@ public class SessionActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Go to open discussion forum.
                 Intent messageIntent = new Intent(getApplicationContext(), MessagingActivity.class);
-                Bundle mBundle = new Bundle();
-                mBundle.putString("username", mUser);
-                messageIntent.putExtras(mBundle);
                 startActivity(messageIntent);
             }
         });
@@ -134,15 +137,41 @@ public class SessionActivity extends AppCompatActivity {
             }
         });
 
+        // Add listener for the existance of an active session.
+        mDatabase.child("ActiveSession").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if(dataSnapshot.getValue(String.class).equals("true")){
+                    activeSession = true;
+                }
+                else{
+                    activeSession = false;
+                }
+                if (instructor && !activeSession){
+                    Toast.makeText(getApplicationContext(), "No Active Session", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                return;
+            }
+        });
+
         toLocate.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                // Pull up google maps to office hours location.
-                String geoUri = "http://maps.google.com/maps?q=loc:" + latitude + "," + longitude + " (" + "Office Hours" + ")";
-                Intent mapIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(geoUri));
-                mapIntent.setPackage("com.google.android.apps.maps");
-                startActivity(mapIntent);
+                // Pull up google maps to office hours location, if a session exists.
+                if (!activeSession){
+                    Toast.makeText(getApplicationContext(), "No Active Session", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    String geoUri = "http://maps.google.com/maps?q=loc:" + latitude + "," + longitude + " (" + "Office Hours" + ")";
+                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(geoUri));
+                    mapIntent.setPackage("com.google.android.apps.maps");
+                    startActivity(mapIntent);
+                }
             }
 
             });
