@@ -186,7 +186,7 @@ public class QueueActivity extends AppCompatActivity {
     }
 
     private File createImageFile() throws IOException {
-        // Create a unique image file name. Save camera image locally.
+        // Create a unique image file name. Save camera image in the external files directory.
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         String imageFileName = "JPEG_" + timeStamp + "_";
         File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
@@ -212,7 +212,7 @@ public class QueueActivity extends AppCompatActivity {
                 editor.putString("Headshot", mCurrentPhotoPath);
                 editor.commit();
             }
-            //Save image file to Media Store.
+            //Scan image file to Media Store.
             MediaScannerConnection.scanFile(QueueActivity.this, new String[]{imageUri.getPath()}, null, new MediaScannerConnection.OnScanCompletedListener(){
                 public void onScanCompleted(String path, Uri uri){
                     Log.d("Message", "scan completed");
