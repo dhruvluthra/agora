@@ -40,9 +40,11 @@ public class MessagingAdapter extends ArrayAdapter<Entry> {
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.message_entry, parent, false);
         }
+        // Display username.
         TextView userName = (TextView) convertView.findViewById(R.id.userTextView);
-        Log.d("Message", "user: " + message.mUser);
         userName.setText(message.mUser);
+
+        // Display user message.
         TextView messageText = (TextView) convertView.findViewById(R.id.messageTextView);
         messageText.setText(message.mMessage);
 

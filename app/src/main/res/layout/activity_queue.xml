@@ -44,16 +44,26 @@
         android:layout_width="70dp"
         android:layout_height="45dp"
         android:layout_marginTop="13dp"
-        android:layout_below="@+id/message_entry"
+        android:layout_below="@+id/add"
         android:layout_alignParentRight="true"
         android:text="Enter"
         android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <ImageButton
+        android:id="@+id/camera"
+        android:layout_width="@android:dimen/app_icon_size"
+        android:layout_height="@android:dimen/app_icon_size"
+        android:layout_alignBottom="@+id/add"
+        android:layout_alignParentEnd="true"
+        android:title= "Photo"
+        android:background="@drawable/background"
+        android:src="@drawable/ic_camera_alt_black_24dp" />
 
     <ScrollView
         android:id="@+id/scroll_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/add"
+        android:layout_below="@+id/enter"
         android:fillViewport="true" >
 
         <!-- Grid View showing image thumbnails -->

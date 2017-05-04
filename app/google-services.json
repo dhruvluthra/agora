@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1089725549711-sknlkbp6uj3mjc6csv93hskbtv42acap.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "compsci290.edu.duke.agora",
+            "certificate_hash": "2a3f6e8fbeb9111aac8875ed1ab85e5f649d3f57"
+          }
+        },
+        {
           "client_id": "1089725549711-kjfblb3kpqqrl2s1s2te6kuj954bp172.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

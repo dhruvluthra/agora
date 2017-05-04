@@ -25,10 +25,9 @@
         android:layout_height="55dp"
         android:text="Help Queue"
         android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_marginBottom="58dp"
         android:layout_above="@+id/forum"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="89dp" />
-
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/forum"
@@ -38,5 +37,15 @@
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:layout_centerVertical="true"
         android:layout_alignStart="@+id/queue" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id= "@+id/getLocation"
+        android:text = "View Location"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_marginTop="61dp"
+        android:layout_below="@+id/forum"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
