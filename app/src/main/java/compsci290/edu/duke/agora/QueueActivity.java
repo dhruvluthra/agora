@@ -56,11 +56,6 @@ public class QueueActivity extends AppCompatActivity {
 
         final DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
 
-        if (instructor){
-            //Initialize queue in Firebase.
-            mDatabase.child("students").setValue("studentsList");
-        }
-
         //Create listener for students added to queue in Firebase database.
         mDatabase.child("students").addChildEventListener(new ChildEventListener() {
             @Override
