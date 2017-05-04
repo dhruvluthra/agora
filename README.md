@@ -16,21 +16,20 @@ The application is completed.
 
 - Final Turn In (April 30, 2017): We have completed the general functionality of the application. We now have a functioning queue that students can sign up for help and a messaging forum.
 
-- Completion (May 3, 2017): Updated and refactored the code.
+- Completion (May 4, 2017): Updated and refactored the code.
 
 The general breakdown of our five optional features is as follows:
 
   * Authentication: Using Firebase, we implemented a login service. The user can create an account using their email and password and then login with the same account.
   * Realtime Database: To implement the queue feature of the application, we used Firebase's realtime database
 service that allows us to write to and read from stored JSON data files.
-  * Messaging Service using a 3rd Party API: We used SendBird's chat messaging API for android to implement the messaging forum. This is a change from our original plan to use a realtime database.
-  * Camera: We use the camera on the phone to allow the user to attach their picture to their queue sign-up to make it easier for the teacher to identify them.
+  * Messaging Service using a 3rd Party API: We used SendBird's chat messaging API for Android to implement the messaging forum. This is an update from our original plan to use a realtime database.
+  * Camera: We use the camera on the phone to allow the user to attach their picture to their queue sign-up to make it easier for the teacher to identify them. The resulting photo is then uploaded to Firebase storage.
   * Location Services: When a session is created, the teacher's location is saved in Firebase. Students joining the session can open Google Maps to the location of office hours to help them navigate to the desired location.
 
 User and programmer documentation can be found in the Github repository. The user documentation outlines how
 a typical user can use the application and the programmer documentation gives an overview of the different
 classes used in the application.
-
 
 ### Team
 - Dhruv Luthra
