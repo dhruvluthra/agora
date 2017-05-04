@@ -84,6 +84,8 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // Create an office hours session as an instructor.
                 Intent sessionIntent = new Intent(getApplicationContext(), SessionActivity.class);
+                //Initialize queue in Firebase.
+                mDatabase.child("students").setValue("studentsList");
                 Bundle mBundle = new Bundle();
                 // Save user identity as 'instructor'.
                 mBundle.putString("identity", "teacher");
