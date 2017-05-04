@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 mBundle.putString("username", mEmail.getText().toString());
                 homeIntent.putExtras(mBundle);
 
-                if (true) {
+                if (goHomeActivity) {
                     //If Firebase authorizes login, can proceed to next screen.
                     Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
                     startActivity(homeIntent);
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                 mPassword = (EditText) findViewById(R.id.password);
                 createAccount(mEmail.getText().toString(), mPassword.getText().toString());
                 Intent homeIntent = new Intent(getApplicationContext(), HomeActivity.class);
-                if (true) {
+                if (goHomeActivity) {
                     //If Firebase authorizes account creation, can proceed to next screen.
                     Toast.makeText(getApplicationContext(), "Account Created", Toast.LENGTH_SHORT).show();
                     startActivity(homeIntent);
